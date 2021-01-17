@@ -4,6 +4,9 @@ const config = require("../config");
 
 const twit = new Twit(config);
 
+const url =
+  "https://archiveofourown.org/works/search?utf8=%E2%9C%93&commit=Search&work_search%5Bquery%5D=";
+
 const tweetSomething = (message, nameID) => {
   const tweet = {
     status: message,
@@ -29,7 +32,7 @@ const tweetHandle = (tweetMSG) => {
   });
 
   const replyTo = tweetMSG.in_reply_to_screen_name;
-  const text = tweetMSG.text;
+  const text = tweetMSG.text.replace(`@${replyTo}`, "");
   const from = tweetMSG.user.screen_name;
   const nameID = tweetMSG.id_str;
 
@@ -37,9 +40,13 @@ const tweetHandle = (tweetMSG) => {
   console.log(text);
 
   if (replyTo === "ao3bot_") {
-    const reply = `@${from} hey mom`;
+    const reply = `@${from} hey mom ${generateSearch(text)}`;
     tweetSomething(reply, nameID);
   }
+};
+
+const generateSearch = (search) => {
+  return url + encodeURI(search);
 };
 
 module.exports = {
