@@ -40,7 +40,7 @@ const tweetHandle = (tweetMSG) => {
   console.log(text);
 
   if (replyTo === "ao3bot_") {
-    const reply = `@${from} hey mom ${generateSearch(text)}`;
+    const reply = `@${from} your search for: ${text} ${generateSearch(text)}`;
     tweetSomething(reply, nameID);
   }
 };
