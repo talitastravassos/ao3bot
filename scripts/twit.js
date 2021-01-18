@@ -48,8 +48,6 @@ const tweetHandle = async (tweetMSG) => {
   const from = tweetMSG.user.screen_name;
   const nameID = tweetMSG.id_str;
   const foundNumber = await scrap.scraping(generateSearch(query));
-
-  console.log(replyTo + from);
   console.log(text);
   console.log(foundNumber);
 
