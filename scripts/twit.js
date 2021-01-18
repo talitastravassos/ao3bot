@@ -8,6 +8,15 @@ const twit = new Twit(config);
 const url =
   "https://archiveofourown.org/works/search?utf8=%E2%9C%93&commit=Search&work_search%5Bquery%5D=";
 
+const completePossibilities = [
+  "complete",
+  "only complete",
+  "complete only",
+  "concluídas",
+  "concluidas",
+  "completas",
+];
+
 const tweetSomething = (message, nameID) => {
   const tweet = {
     status: message,
@@ -33,10 +42,12 @@ const tweetHandle = async (tweetMSG) => {
   });
 
   const replyTo = tweetMSG.in_reply_to_screen_name;
-  const text = tweetMSG.text.replace(`@${replyTo}`, "").trim();
+  const text = removeCompleteQuery(tweetMSG.text.replace(`@${replyTo}`, ""));
+  const query = tweetMSG.text.replace(`@${replyTo}`, "").trim();
+
   const from = tweetMSG.user.screen_name;
   const nameID = tweetMSG.id_str;
-  const foundNumber = await scrap.scraping(generateSearch(text));
+  const foundNumber = await scrap.scraping(generateSearch(query));
 
   console.log(replyTo + from);
   console.log(text);
@@ -45,8 +56,8 @@ const tweetHandle = async (tweetMSG) => {
   if (replyTo === "ao3bot_") {
     let reply = "";
     if (Number(foundNumber)) {
-      reply = `@${from} your search for "${text}" returns ${foundNumber} results 🥳 ${generateSearch(
-        text
+      reply = `@${from} your search for "${text}" returns ${foundNumber} works 🥳 ${generateSearch(
+        query
       )}`;
     } else {
       reply = `@${from} I'm sorry, your search has no results 😔`;
@@ -55,8 +66,30 @@ const tweetHandle = async (tweetMSG) => {
   }
 };
 
+const completeCheck = (search) => {
+  const onlyComplete = completePossibilities.map((possibility) =>
+    search.includes(possibility)
+  );
+
+  return onlyComplete.includes(true);
+};
+
 const generateSearch = (search) => {
-  return url + encodeURI(search);
+  const completeQuery = completeCheck(search)
+    ? "&work_search%5Bcomplete%5D=T"
+    : "";
+
+  search = removeCompleteQuery(search);
+
+  return url + encodeURI(search) + completeQuery;
+};
+
+const removeCompleteQuery = (text) => {
+  completePossibilities.map(
+    (possibility) => (text = text.replace(possibility, "").trim())
+  );
+
+  return text;
 };
 
 module.exports = {
