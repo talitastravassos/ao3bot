@@ -58,11 +58,11 @@ const tweetHandle = async (tweetMSG) => {
 
   let reply = "";
   if (Number(foundNumber)) {
-    reply = `@${from} your search for "${text}" returns ${foundNumber} works 🥳 ${generateSearch(
+    reply = `@${from} bestie your search for "${text}" returns ${foundNumber} works 🥳 ${generateSearch(
       query
     )}`;
   } else {
-    reply = `@${from} I'm sorry, your search has no results 😔`;
+    reply = `@${from} I'm sorry bestie, your search has no results 😔`;
   }
   tweetSomething(reply, nameID);
 };
