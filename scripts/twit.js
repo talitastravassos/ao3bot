@@ -42,26 +42,29 @@ const tweetHandle = async (tweetMSG) => {
   });
 
   const replyTo = tweetMSG.in_reply_to_screen_name;
-  const text = removeCompleteQuery(tweetMSG.text.replace(`@${replyTo}`, ""));
-  const query = tweetMSG.text.replace(`@${replyTo}`, "").trim();
+  const text = removeCompleteQuery(tweetMSG.text.replace(`@ao3bot_`, ""));
+  const query = tweetMSG.text.replace(`@ao3bot_`, "").trim();
 
   const from = tweetMSG.user.screen_name;
   const nameID = tweetMSG.id_str;
   const foundNumber = await scrap.scraping(generateSearch(query));
+
+  // console.log("query", query);
+  // console.log("replyTo", replyTo);
+  // console.log("from", from);
+
   console.log(text);
   console.log(foundNumber);
 
-  if (replyTo === "ao3bot_") {
-    let reply = "";
-    if (Number(foundNumber)) {
-      reply = `@${from} your search for "${text}" returns ${foundNumber} works 🥳 ${generateSearch(
-        query
-      )}`;
-    } else {
-      reply = `@${from} I'm sorry, your search has no results 😔`;
-    }
-    tweetSomething(reply, nameID);
+  let reply = "";
+  if (Number(foundNumber)) {
+    reply = `@${from} your search for "${text}" returns ${foundNumber} works 🥳 ${generateSearch(
+      query
+    )}`;
+  } else {
+    reply = `@${from} I'm sorry, your search has no results 😔`;
   }
+  tweetSomething(reply, nameID);
 };
 
 const completeCheck = (search) => {
