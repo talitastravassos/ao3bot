@@ -2,6 +2,7 @@ const Twit = require("twit");
 const fs = require("fs");
 const config = require("../config");
 const scrap = require("./scrap");
+const ships = require("../ships.json");
 
 const twit = new Twit(config);
 
@@ -17,7 +18,7 @@ const completePossibilities = [
   "completas",
 ];
 
-const tweetSomething = (message, nameID) => {
+const tweetSomething = (message, nameID = null) => {
   const tweet = {
     status: message,
     in_reply_to_status_id: nameID,
@@ -44,27 +45,40 @@ const tweetHandle = async (tweetMSG) => {
   const replyTo = tweetMSG.in_reply_to_screen_name;
   const text = removeCompleteQuery(tweetMSG.text.replace(`@ao3bot_`, ""));
   const query = tweetMSG.text.replace(`@ao3bot_`, "").trim();
+  const found = await foundNumber(query);
 
   const from = tweetMSG.user.screen_name;
   const nameID = tweetMSG.id_str;
-  const foundNumber = await scrap.scraping(generateSearch(query));
 
   // console.log("query", query);
   // console.log("replyTo", replyTo);
   // console.log("from", from);
 
   console.log(text);
-  console.log(foundNumber);
+  // console.log(foundNumber);
 
   let reply = "";
-  if (Number(foundNumber)) {
-    reply = `@${from} bestie your search for "${text}" returns ${foundNumber} works 🥳 ${generateSearch(
+  if (Number(found)) {
+    reply = `@${from} bestie your search for "${text}" returns ${found} works 🥳 ${generateSearch(
       query
     )}`;
   } else {
     reply = `@${from} I'm sorry bestie, your search has no results 😔`;
   }
   tweetSomething(reply, nameID);
+};
+
+const dailyTweet = async () => {
+  const random = Math.floor(Math.random() * ships.length);
+  const ship = ships[random];
+
+  const tweet = `Hey besties! Do you guys know that "${ship.query}" from ${
+    ship.from
+  } has ${await foundNumber(
+    ship.query
+  )} works on ao3? check this out ${generateSearch(ship.query)}`;
+
+  tweetSomething(tweet);
 };
 
 const completeCheck = (search) => {
@@ -74,6 +88,8 @@ const completeCheck = (search) => {
 
   return onlyComplete.includes(true);
 };
+
+const foundNumber = (search) => scrap.scraping(generateSearch(search));
 
 const generateSearch = (search) => {
   const completeQuery = completeCheck(search)
@@ -97,4 +113,5 @@ module.exports = {
   twit,
   tweetHandle,
   tweetSomething,
+  dailyTweet,
 };
