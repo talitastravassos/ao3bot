@@ -71,12 +71,11 @@ const tweetHandle = async (tweetMSG) => {
 const dailyTweet = async () => {
   const random = Math.floor(Math.random() * ships.length);
   const ship = ships[random];
+  const found = await foundNumber(`${ship.query} ${ship.from}`);
 
   const tweet = `Hey besties! Do you guys know that "${ship.query}" from ${
     ship.from
-  } has ${await foundNumber(
-    `${ship.query} ${ship.from}`
-  )} works on ao3? check this out ${generateSearch(
+  } has ${found} works on ao3? check this out 😝 ${generateSearch(
     `${ship.query} ${ship.from}`
   )}`;
 
