@@ -30,4 +30,4 @@ function executeOnHours(hours, callback) {
   }, oneHour);
 }
 
-executeOnHours([10, 16, 22], dailyTweet);
+executeOnHours([11, 19, 23], dailyTweet);

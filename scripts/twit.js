@@ -75,8 +75,10 @@ const dailyTweet = async () => {
   const tweet = `Hey besties! Do you guys know that "${ship.query}" from ${
     ship.from
   } has ${await foundNumber(
-    ship.query
-  )} works on ao3? check this out ${generateSearch(ship.query)}`;
+    `${ship.query} ${ship.from}`
+  )} works on ao3? check this out ${generateSearch(
+    `${ship.query} ${ship.from}`
+  )}`;
 
   tweetSomething(tweet);
 };

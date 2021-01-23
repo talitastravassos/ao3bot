@@ -98,5 +98,405 @@
     "id": 20,
     "query": "Serena Campbell/Bernie Wolfe",
     "from": "Holby City"
+  },
+  {
+    "id": 21,
+    "query": "Maxine 'Max' Caulfield/Chloe Price",
+    "from": "Life Is Strange (Video Game)"
+  },
+  {
+    "id": 22,
+    "query": "Rachel Berry/Quinn Fabray",
+    "from": "Glee"
+  },
+  {
+    "id": 23,
+    "query": "Sara Lance/Ava Sharpe",
+    "from": "DC's Legends of Tomorrow (TV)"
+  },
+  {
+    "id": 24,
+    "query": "Lapis Lazuli/Peridot",
+    "from": "Steven Universe (Cartoon)"
+  },
+  {
+    "id": 25,
+    "query": "Peggy Carter/Angie Martinelli",
+    "from": "Agent Carter (TV)"
+  },
+  {
+    "id": 26,
+    "query": "Asui Tsuyu/Uraraka Ochako",
+    "from": "Boku no Hero Academia | My Hero Academia"
+  },
+  {
+    "id": 27,
+    "query": "Miranda Priestly/Andrea Sachs",
+    "from": "The Devil Wears Prada (2006)"
+  },
+  {
+    "id": 28,
+    "query": "Cheryl Blossom/Toni Topaz",
+    "from": "Riverdale (TV 2017)"
+  },
+  {
+    "id": 29,
+    "query": "Luna Lovegood/Ginny Weasley",
+    "from": "Harry Potter"
+  },
+  {
+    "id": 30,
+    "query": "Anna/Elsa (Disney)",
+    "from": "Frozen (Disney Movies)"
+  },
+  {
+    "id": 31,
+    "query": "Thirteenth Doctor/Yasmin Khan",
+    "from": "Doctor Who (2005)"
+  },
+  {
+    "id": 32,
+    "query": "Allison Argent/Lydia Martin",
+    "from": "Teen Wolf (TV)"
+  },
+  {
+    "id": 33,
+    "query": "Jemma Simmons/Skye | Daisy Johnson",
+    "from": "Agents of S.H.I.E.L.D. (TV)"
+  },
+  {
+    "id": 34,
+    "query": "Delphine Cormier/Cosima Niehaus",
+    "from": "Orphan Black (TV)"
+  },
+  {
+    "id": 35,
+    "query": "Eve Polastri/Villanelle | Oksana Astankova",
+    "from": "Killing Eve (TV 2018)"
+  },
+  {
+    "id": 36,
+    "query": "Clary Fray/Isabelle Lightwood",
+    "from": "Shadowhunters (TV)"
+  },
+  {
+    "id": 37,
+    "query": "Myka Bering/Helena 'H. G.' Wells",
+    "from": "Warehouse"
+  },
+  {
+    "id": 38,
+    "query": "Pamela Isley/Harleen Quinzel",
+    "from": "Harley Quinn"
+  },
+  {
+    "id": 39,
+    "query": "Sansa Stark/Margaery Tyrell",
+    "from": "Game of Thrones (TV)"
+  },
+  {
+    "id": 40,
+    "query": " Erin Gilbert/Jillian Holtzmann",
+    "from": "Ghostbusters (2016)"
+  },
+  {
+    "id": 41,
+    "query": "Mikasa Ackerman/Annie Leonhart",
+    "from": "Shingeki no Kyojin | Attack on Titan"
+  },
+  {
+    "id": 42,
+    "query": "Kimberly Hart/Trini",
+    "from": "Power Rangers (2017)"
+  },
+  {
+    "id": 43,
+    "query": "Maura Isles/Jane Rizzoli",
+    "from": "Rizzoli & Isles"
+  },
+  {
+    "id": 44,
+    "query": " Lena 'Tracer' Oxton/Widowmaker | Amélie Lacroix",
+    "from": "Overwatch (Video Game)"
+  },
+  {
+    "id": 45,
+    "query": "Female Shepard/Liara T'Soni",
+    "from": "Mass Effect Trilogy"
+  },
+  {
+    "id": 46,
+    "query": "Maria Hill/Natasha Romanov",
+    "from": "Marvel Cinematic Universe"
+  },
+  {
+    "id": 47,
+    "query": "Anya/Raven Reyes",
+    "from": "The 100 (TV)"
+  },
+  {
+    "id": 48,
+    "query": "Alex Danvers/Kara Danvers",
+    "from": "Supergirl (TV 2015)"
+  },
+  {
+    "id": 49,
+    "query": "Pearl/Rose Quartz | Pink Diamond",
+    "from": "Steven Universe (Cartoon)"
+  },
+  {
+    "id": 50,
+    "query": "Shimizu Kiyoko/Yachi Hitoka",
+    "from": "Haikyuu!!"
+  },
+  {
+    "id": 51,
+    "query": "Gwen/Morgana (Merlin)",
+    "from": "Merlin (TV)"
+  },
+  {
+    "id": 52,
+    "query": "Pepper Potts/Natasha Romanov",
+    "from": "The Avengers (Marvel Movies)"
+  },
+  {
+    "id": 53,
+    "query": "Tobin Heath/Christen Press",
+    "from": "Women's Soccer RPF"
+  },
+  {
+    "id": 54,
+    "query": "Tara Maclay/Willow Rosenberg",
+    "from": "Buffy the Vampire Slayer (TV)"
+  },
+  {
+    "id": 55,
+    "query": "Terezi Pyrope/Vriska Serket",
+    "from": "Homestuck"
+  },
+  {
+    "id": 56,
+    "query": "Diana Cavendish/Atsuko 'Akko' Kagari",
+    "from": "Little Witch Academia"
+  },
+  {
+    "id": 57,
+    "query": "Astra/Alex Danvers",
+    "from": "Supergirl (TV 2015)"
+  },
+  {
+    "id": 58,
+    "query": "Ruby/Sapphire",
+    "from": "Steven Universe (Cartoon) "
+  },
+  {
+    "id": 59,
+    "query": "Hermione Granger/Pansy Parkinson",
+    "from": "Harry Potter"
+  },
+  {
+    "id": 60,
+    "query": "Maria Reynolds/Elizabeth 'Eliza' Schuyler",
+    "from": "Hamilton"
+  },
+  {
+    "id": 61,
+    "query": "Ashlyn Harris/Ali Krieger",
+    "from": "Women's Soccer RPF"
+  },
+  {
+    "id": 62,
+    "query": "Faith Lehane/Buffy Summers",
+    "from": "Buffy the Vampire Slayer (TV)"
+  },
+  {
+    "id": 63,
+    "query": "Pacifica Northwest/Mabel Pines",
+    "from": "Gravity Falls"
+  },
+  {
+    "id": 64,
+    "query": "Nyssa al Ghul/Sara Lance",
+    "from": "Arrow (TV 2012)"
+  },
+  {
+    "id": 65,
+    "query": "Carol Aird/Therese Belivet",
+    "from": "Carol (2015)"
+  },
+  {
+    "id": 66,
+    "query": "Betty Cooper/Veronica Lodge",
+    "from": "Riverdale (TV 2017)"
+  },
+  {
+    "id": 67,
+    "query": "Leliana/Female Warden (Dragon Age)",
+    "from": "Dragon Age: Origins"
+  },
+  {
+    "id": 68,
+    "query": "Penelope Park/Josie Saltzman",
+    "from": "Legacies (TV 2018)"
+  },
+  {
+    "id": 69,
+    "query": "Rachel Amber/Chloe Price",
+    "from": "Life Is Strange (Video Game)"
+  },
+  {
+    "id": 70,
+    "query": "Evie/Mal (Disney)",
+    "from": "Descendants (Disney Movies)"
+  },
+  {
+    "id": 71,
+    "query": "Jester Lavorre/Beauregard Lionett",
+    "from": "Critical Role (Web Series)"
+  },
+  {
+    "id": 72,
+    "query": " Amethyst/Pearl",
+    "from": "Steven Universe (Cartoon)"
+  },
+  {
+    "id": 73,
+    "query": "Mila Babicheva/Sara Crispino",
+    "from": "Yuri!!! on Ice (Anime)"
+  },
+  {
+    "id": 74,
+    "query": "Princess Bubblegum/Marceline",
+    "from": "Adventure Time"
+  },
+  {
+    "id": 75,
+    "query": "Misty Day/Cordelia Foxx | Cordelia Goode",
+    "from": "American Horror Story"
+  },
+  {
+    "id": 76,
+    "query": "Gabrielle/Xena",
+    "from": "Xena: Warrior Princess"
+  },
+  {
+    "id": 77,
+    "query": "Carol Danvers/Maria Rambeau",
+    "from": "Captain Marvel (2019)"
+  },
+  {
+    "id": 78,
+    "query": "Beauregard Lionett/Yasha",
+    "from": "Critical Role (Web Series)"
+  },
+  {
+    "id": 79,
+    "query": "Jennifer 'JJ' Jareau/Emily Prentiss",
+    "from": "Criminal Minds (US TV)"
+  },
+  {
+    "id": 80,
+    "query": "Female Hawke/Isabela",
+    "from": "Dragon Age II"
+  },
+  {
+    "id": 81,
+    "query": "Charity Dingle/Vanessa Woodfield",
+    "from": "Emmerdale"
+  },
+  {
+    "id": 82,
+    "query": "Hermione Granger/Bellatrix Black Lestrange",
+    "from": "Harry Potter"
+  },
+  {
+    "id": 83,
+    "query": "Trixie Mattel/Katya Zamolodchikova",
+    "from": "RuPaul's Drag Race"
+  },
+  {
+    "id": 84,
+    "query": "Haruno Sakura/Yamanaka Ino",
+    "from": "Naruto"
+  },
+  {
+    "id": 85,
+    "query": "Malia Tate/Kira Yukimura",
+    "from": "Teen Wolf (TV)"
+  },
+  {
+    "id": 86,
+    "query": "Wanda Maximoff/Natasha Romanov",
+    "from": "Marvel Cinematic Universe"
+  },
+  {
+    "id": 87,
+    "query": "Kathryn Janeway/Seven of Nine",
+    "from": "Star Trek: Voyager"
+  },
+  {
+    "id": 88,
+    "query": "Hope Mikaelson/Josie Saltzman",
+    "from": "Legacies (TV 2018)"
+  },
+  {
+    "id": 89,
+    "query": "Samantha 'Sam' Arias/Alex Danvers",
+    "from": "Supergirl (TV 2015)"
+  },
+  {
+    "id": 90,
+    "query": "Ayase Eli/Toujou Nozomi",
+    "from": "Love Live! School Idol Project"
+  },
+  {
+    "id": 91,
+    "query": "Maya Hart/Riley Matthews",
+    "from": "Girl Meets World"
+  },
+  {
+    "id": 92,
+    "query": "Kaiou Michiru/Tenoh Haruka",
+    "from": "Bishoujo Senshi Sailor Moon | Pretty Guardian Sailor Moon"
+  },
+  {
+    "id": 93,
+    "query": "Adora/Glimmer (She-Ra)",
+    "from": "She-Ra and the Princesses of Power (2018)"
+  },
+  {
+    "id": 94,
+    "query": "Charlie Bradbury/Jo Harvelle",
+    "from": "Supernatural"
+  },
+  {
+    "id": 95,
+    "query": "Emily/Lena 'Tracer' Oxton",
+    "from": "Overwatch (Video Game)"
+  },
+  {
+    "id": 96,
+    "query": "Cosette Fauchelevent/Éponine Thénardier",
+    "from": "Les Misérables - All Media Types"
+  },
+  {
+    "id": 97,
+    "query": "Moira O'Deorain/Angela 'Mercy' Ziegler",
+    "from": "Overwatch (Video Game)"
+  },
+  {
+    "id": 98,
+    "query": "Amethyst/Peridot",
+    "from": "Steven Universe (Cartoon)"
+  },
+  {
+    "id": 99,
+    "query": "Nishikino Maki/Yazawa Nico",
+    "from": "Love Live! School Idol Project"
+  },
+  {
+    "id": 100,
+    "query": "Female Inquisitor/Josephine Montilyet",
+    "from": "Dragon Age: Inquisition"
   }
 ]
