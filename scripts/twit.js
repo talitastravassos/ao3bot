@@ -76,7 +76,9 @@ const dailyTweet = async () => {
   const tweet = `Hey besties! Do you guys know that "${ship.query}" from ${
     ship.from
   } has ${found} works on ao3? check this out 😝 ${generateSearch(
-    `${ship.query} ${ship.from}`
+    `${ship.query.replace("(", "").replace(")", "")} ${ship.from
+      .replace("(", "")
+      .replace(")", "")}`
   )}`;
 
   tweetSomething(tweet);
