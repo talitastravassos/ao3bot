@@ -9,6 +9,8 @@ const twit = new Twit(config);
 const url =
   "https://archiveofourown.org/works/search?utf8=%E2%9C%93&commit=Search&work_search%5Bquery%5D=";
 
+const urlPattern = /(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/g;
+
 const completePossibilities = [
   "complete",
   "only complete",
@@ -43,8 +45,13 @@ const tweetHandle = async (tweetMSG) => {
   });
 
   const replyTo = tweetMSG.in_reply_to_screen_name;
-  const text = removeCompleteQuery(tweetMSG.text.replace(`@ao3bot_`, ""));
-  const query = tweetMSG.text.replace(`@ao3bot_`, "").trim();
+  const text = removeCompleteQuery(
+    tweetMSG.text.replace(`@ao3bot_`, "").replace(urlPattern, "")
+  );
+  const query = tweetMSG.text
+    .replace(`@ao3bot_`, "")
+    .replace(urlPattern, "")
+    .trim();
   const found = await foundNumber(query);
 
   const from = tweetMSG.user.screen_name;
