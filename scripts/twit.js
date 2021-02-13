@@ -20,7 +20,18 @@ const completePossibilities = [
   "completas",
 ];
 
+const acknowledgementPossibilities = [
+  "thanks",
+  "thank you",
+  "obrigada",
+  "obrigado",
+  "agradecida",
+  "valeu",
+];
+
 const tweetSomething = (message, nameID = null) => {
+  console.log("tweetSomething", nameID);
+
   const tweet = {
     status: message,
     in_reply_to_status_id: nameID,
@@ -57,6 +68,10 @@ const tweetHandle = async (tweetMSG) => {
   const from = tweetMSG.user.screen_name;
   const nameID = tweetMSG.id_str;
 
+  if (checkPossibilities(query, acknowledgementPossibilities)) {
+    return thanksTweet(from, nameID);
+  }
+
   console.log("query", query);
   console.log("replyTo", replyTo);
   console.log("from", from);
@@ -91,18 +106,24 @@ const dailyTweet = async () => {
   tweetSomething(tweet);
 };
 
-const completeCheck = (search) => {
-  const onlyComplete = completePossibilities.map((possibility) =>
+const checkPossibilities = (search, possibilities) => {
+  const checklist = possibilities.map((possibility) =>
     search.includes(possibility)
   );
 
-  return onlyComplete.includes(true);
+  return checklist.includes(true);
+};
+
+const thanksTweet = (from, nameID) => {
+  const tweet = `@${from} You're welcome, bestie! 🥰🥰🥰`;
+
+  tweetSomething(tweet, nameID);
 };
 
 const foundNumber = (search) => scrap.scraping(generateSearch(search));
 
 const generateSearch = (search) => {
-  const completeQuery = completeCheck(search)
+  const completeQuery = checkPossibilities(search, completePossibilities)
     ? "&work_search%5Bcomplete%5D=T"
     : "";
 
