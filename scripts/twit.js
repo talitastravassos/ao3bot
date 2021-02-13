@@ -46,10 +46,10 @@ const tweetHandle = async (tweetMSG) => {
 
   const replyTo = tweetMSG.in_reply_to_screen_name;
   const text = removeCompleteQuery(
-    tweetMSG.text.replace(`@ao3bot_`, "").replace(urlPattern, "")
+    tweetMSG.text.replace(/@ao3bot_/gi, "").replace(urlPattern, "")
   );
   const query = tweetMSG.text
-    .replace(`@ao3bot_`, "")
+    .replace(/@ao3bot_/gi, "")
     .replace(urlPattern, "")
     .trim();
   const found = await foundNumber(query);
@@ -57,12 +57,12 @@ const tweetHandle = async (tweetMSG) => {
   const from = tweetMSG.user.screen_name;
   const nameID = tweetMSG.id_str;
 
-  // console.log("query", query);
-  // console.log("replyTo", replyTo);
-  // console.log("from", from);
+  console.log("query", query);
+  console.log("replyTo", replyTo);
+  console.log("from", from);
 
-  console.log(text);
-  // console.log(foundNumber);
+  console.log({ text });
+  console.log({ found });
 
   let reply = "";
   if (Number(found)) {
