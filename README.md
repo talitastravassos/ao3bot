@@ -3,4 +3,4 @@ a fanfic twitter bot
 
 ## Overview
 
-a twitter bot that performs searches on the archiveofourown.org website
+a twitter bot that searches on the archiveofourown.org website
