@@ -498,5 +498,26 @@
     "id": 100,
     "query": "Female Inquisitor/Josephine Montilyet",
     "from": "Dragon Age: Inquisition"
+  },
+  {
+    "id": 101,
+    "query": "Dani Clayton/Jamie",
+    "from": "The Haunting of Bly Manor (TV)"
+  },
+  {
+    "id": 102,
+    "query": "Sister Beatrice/Ava Silva",
+    "from": "Warrior Nun (TV)"
+  },
+  {
+    "id": 103,
+    "query": "Fleur Delacour/Hermione Granger",
+    "from": "Harry Potter"
+  },
+
+  {
+    "id": 104,
+    "query": "Naomi Campbell/Emily Fitch",
+    "from": "Skins (UK)"
   }
 ]
