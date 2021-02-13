@@ -30,8 +30,6 @@ const acknowledgementPossibilities = [
 ];
 
 const tweetSomething = (message, nameID = null) => {
-  console.log("tweetSomething", nameID);
-
   const tweet = {
     status: message,
     in_reply_to_status_id: nameID,
