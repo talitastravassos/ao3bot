@@ -106,7 +106,7 @@ const dailyTweet = async () => {
 
 const checkPossibilities = (search, possibilities) => {
   const checklist = possibilities.map((possibility) =>
-    search.includes(possibility)
+    search.toLowerCase().includes(possibility)
   );
 
   return checklist.includes(true);
